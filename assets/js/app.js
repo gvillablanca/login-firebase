@@ -17,6 +17,8 @@
       firebase.auth().onAuthStateChanged(function(user) {
         if (user) {
           isVisible();
+          $('#register-login').hide();
+          $('#google-login').hide();
           var displayName = user.displayName;
           var email = user.email;
           var emailVerified = user.emailVerified;
@@ -33,7 +35,25 @@
 
     function isVisible(){
       var content = document.getElementById('content');
-      content.innerHTML = 'solo lo ve usuario existente';
+      content.innerHTML =  `
+
+      <p id="logout-text" >Bienvenido!</p>
+      <button id="logout" class="btn btn-default" onclick="logout()">Cerrar sesión</button> 
+      `;
+    }
+
+    function logout(){
+      firebase.auth().signOut()
+      .then(function(){
+        console.log('saliendo...');
+        $('#register-login').show();
+        $('#google-login').show();
+        $('#logout').hide();
+        $('#logout-text').hide();
+      })
+      .catch(function (error){
+        console.log(error);
+      })
     }
 
     $('#register-login').on('click', ()=>{
