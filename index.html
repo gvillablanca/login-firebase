@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Firebase login</title>
+
+    <script src="https://www.gstatic.com/firebasejs/4.10.0/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyAvcO8ANWxtVYoZ6GxDRtMqX5JqR_kmB8E",
+        authDomain: "project-api-278af.firebaseapp.com",
+        databaseURL: "https://project-api-278af.firebaseio.com",
+        projectId: "project-api-278af",
+        storageBucket: "project-api-278af.appspot.com",
+        messagingSenderId: "948325553489"
+      };
+      firebase.initializeApp(config);
+    </script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="">
+</head>
+<body>
+
+  <section class="register">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h4>registro de usuarios</h4>
+            <input id="email-register" type="email" placeholder="email" class="form-control">
+            <input id="password-register" type="password" placeholder="password" class="form-control">
+            <button id="send" class="btn btn-default">registrar</button>
+            <button id="home" class="btn btn-default">regresar a login</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="login">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h4>login de usuarios</h4>
+            <input id="email-login" type="email" placeholder="email" class="form-control">
+            <input id="password-login" type="password" placeholder="password" class="form-control">
+            <button id="send-login" class="btn btn-default">logear</button>
+            <button id="register-login" class="btn btn-default">Registrate</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section >
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12" >
+          <h4 class="bg-success" id="content"></h4>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
