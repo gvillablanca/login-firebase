@@ -120,7 +120,7 @@
     fetch('http://yesno.wtf/api/')
     .then(response => {
       return response.json(); //retorna un objeto response en formato JSON
-      cors();
+      
     })
     .then(data => { 
       showAnswer(data); // llamamos a la funcion que nos mostrará la imágen de la data en la página

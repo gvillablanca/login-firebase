@@ -17,30 +17,56 @@
       };
       firebase.initializeApp(config);
     </script>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <link rel="stylesheet" href="">
+  <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">-->
+  <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-
-  <section class="register">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <h4>registro de usuarios</h4>
-            <input id="email-register" type="email" placeholder="email" class="form-control">
-            <input id="password-register" type="password" placeholder="password" class="form-control">
-            <button id="send" class="btn btn-default">registrar</button>
-            <button id="home" class="btn btn-default">regresar a login</button>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-  <section class="login">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <h4>login de usuarios</h4>
+  <section>
+    <div class="row">
+      <div class="container-fluid">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <div class="row logo">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+              <h1>ORÁCULO</h1>
+            </div>
+          </div>
+          <!-- Register Section -->
+          <section class="register">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                  <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                      <h4>Registro de usuarios</h4>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                      <input id="email-register" type="email" placeholder="email" class="form-control">
+                      <input id="password-register" type="password" placeholder="password" class="form-control">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                      <button id="send" class="btn btn-default">Registrarse</button>
+                      <button id="home" class="btn btn-default">Regresar a login</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section><!-- End Section -->
+          <!-- Login Section -->
+          <section class="login">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                  <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                      <h4>Login de usuarios</h4>
+                    </div>
+                  </div>
+                  
             <input id="email-login" type="email" placeholder="email" class="form-control">
             <input id="password-login" type="password" placeholder="password" class="form-control">
             <button id="send-login" class="btn btn-default">logear</button>
@@ -50,6 +76,15 @@
     </div>
   </section>
 
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  
+  
+
   <section id="answer">
     <!--contenido creado -->
   </section>
@@ -58,6 +93,6 @@
   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
   crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-  <script src="assets/js/app.js"></script>
+  <script src="sass/assets/js/app.js"></script>
 </body>
 </html>
