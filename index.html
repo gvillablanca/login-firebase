@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html>
-
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Firebase login</title>
-
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Preguntame</title>
     <script src="https://www.gstatic.com/firebasejs/4.10.0/firebase.js"></script>
     <script>
       // Initialize Firebase
@@ -19,68 +17,47 @@
       };
       firebase.initializeApp(config);
     </script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="">
-  </head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="">
+</head>
+<body>
 
-  <body>
-
-    <section class="register">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            <h4>registro de usuarios</h4>
+  <section class="register">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h4>registro de usuarios</h4>
             <input id="email-register" type="email" placeholder="email" class="form-control">
             <input id="password-register" type="password" placeholder="password" class="form-control">
             <button id="send" class="btn btn-default">registrar</button>
             <button id="home" class="btn btn-default">regresar a login</button>
-          </div>
         </div>
       </div>
-    </section>
-
-    <section class="login">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            <h4>login de usuarios</h4>
+    </div>
+  </section>
+  
+  <section class="login">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h4>login de usuarios</h4>
             <input id="email-login" type="email" placeholder="email" class="form-control">
             <input id="password-login" type="password" placeholder="password" class="form-control">
             <button id="send-login" class="btn btn-default">logear</button>
-            <button id="google-login" class="btn btn-default">logear con google</button>
             <button id="register-login" class="btn btn-default">Registrate</button>
-          </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            <!-- Botonera e indicacion -->
-            <h2>Haz tu pregunta</h2>
-            <form class="ask-here" action="" method="post" placeholder="Escribe tu preguta aquí">
-              <input type="text" name="submit">
-              <button type="button" name="button" id="generarAnswer">Preguntar!</button>
-            </form>
-          </div>
-        </div>
-      </div>
-      <!-- contenido de respuesta random -->
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12" id="content">
-            <!-- Aquí va el gif -->
-            <div id="answer"></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <script src="assets/js/app.js"></script>
-  </body>
-
+  <section id="answer">
+    <!--contenido creado -->
+  </section>
+  
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src="assets/js/app.js"></script>
+</body>
 </html>
