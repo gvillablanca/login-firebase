@@ -57,24 +57,26 @@
     <section>
       <div class="container">
         <div class="row">
+          <div class="col-lg-12">
+            <!-- Botonera e indicacion -->
+            <h2>Haz tu pregunta</h2>
+            <form class="ask-here" action="" method="post" placeholder="Escribe tu preguta aquí">
+              <input type="text" name="submit">
+              <button type="button" name="button" id="generarAnswer">Preguntar!</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- contenido de respuesta random -->
+      <div class="container">
+        <div class="row">
           <div class="col-lg-12" id="content">
-
+            <!-- Aquí va el gif -->
+            <div id="answer"></div>
           </div>
         </div>
       </div>
     </section>
-
-    <!-- SECCION DONDE VA EL FORM PARA HACER LA PREGUNTA Y QUE LA API ENVIE IMAGEN "SI" O "NO"
-    <section>
-      <h2>Haz una pregunta! Y sabrás si la respuesta que buscas es "sí" o "no"</h2>
-      <p>(En serio...haz cualquier pregunta! ;) )</p>
-
-      <form class="ask-here" action="" method="post" placeholder="Escribe tu preguta aquí">
-        <button type="button" name="button" onclick="click()">Preguntar!</button>
-      </form>
-    </section>
-
-    <div id="answer"></div>-->
 
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>

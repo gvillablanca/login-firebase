@@ -80,19 +80,27 @@
       $('.login').show();
     });
 
-    // Llamando a la data de la Api con "Fetch" (Nota: Envío el código comentado para que no choque, por si acaso...)
+//Función para llamar a la API y visualizar su contenido
+  $(document).ready(() => {
+  /*
+  *Se carga el documento, al hacer click en el botón la página empezará a tomar los datos de la API utilizando fetch
+  */
+  $('#generarAnswer').click(() =>{
+    fetch('http://yesno.wtf/api/')
+    .then(response => {
+      return response.json(); //retorna un objeto response en formato JSON
+    })
+    .then(data => { 
+      showAnswer(data); // llamamos a la funcion que nos mostrará la imágen de la data en la página
+    })
+    .catch(error => {
+      alert('Hubo un error en la API'); // Mensaje de error
+    })
 
-    /* $(document).ready(
+    $('#answer').empty();
+  })
+});
 
-      fetch('http://yesno.wtf/api/')
-      .then(response => {
-        return response.json(); // Me va a retornar un objeto "response" en formato JSON
-      })
-      .then(data => {
-        console.log('data = ', data); // Pido que me muestre la data en la consola
-      })
-      .catch(error => {
-        console.error('Hay un error...el servidor no quiere pasarte la data >:(');
-      })); // Mensaje de error por si no puedo obtener la data del servidor
-
-    const answer = document.getElementById('answer'); */
+    function showAnswer(data) {
+      $('#answer').append(`<img src="${data.image}"><div><h3>${data.answer}</h3></div>`);
+    }
