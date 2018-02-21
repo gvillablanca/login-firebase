@@ -1,5 +1,11 @@
     $('.register').hide();
-    //$('#answer').hide();
+    $('#answer').hide();
+
+    $('#cors').on('click', ()=>{
+      $('.login').hide();
+      $('.register').hide();
+      $('#answer').show();
+    });
 
     //evento para ingresar con usuarios registrados
     $('#send-login').on('click', ()=>{
@@ -37,33 +43,8 @@
     function isVisible(){
       var answer = document.getElementById('answer');
       answer.innerHTML =  `
-      <div class="container">
-      <div class="row">
-        <div class="col-lg-12" id="content">
           <p id="logout-text" >Bienvenido!</p>
           <button id="logout" class="btn btn-default" onclick="logout()">Cerrar sesión</button> 
-        </div>
-      </div>
-        <div class="row">
-          <div class="col-lg-12">
-            <!-- Botonera e indicacion -->
-            <h2>Haz tu pregunta</h2>
-            <form class="ask-here" action="" method="post" placeholder="Escribe tu preguta aquí">
-              <input type="text" name="submit">
-              <button type="button" name="button" id="generarAnswer">Preguntar!</button>
-            </form>
-          </div>
-        </div>
-      </div>
-      <!-- contenido de respuesta random -->
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12" id="content">
-            <!-- Aquí va el gif -->
-            <div id="answer"></div>
-          </div>
-        </div>
-      </div>
       `;
       //en esta seccion iria a la vista sus secciones con su contenido, y se ocultaria el login
       $('.login').hide();
@@ -115,12 +96,14 @@
   /*
   *Se carga el documento, al hacer click en el botón la página empezará a tomar los datos de la API utilizando fetch
   */
-  $('#generarAnswer').click(() =>{
-
+  $('#generarAnswer').on('click',() =>{
     fetch('http://yesno.wtf/api/')
     .then(response => {
       return response.json(); //retorna un objeto response en formato JSON
+<<<<<<< HEAD:sass/assets/js/app.js
       
+=======
+>>>>>>> correccion js e implementacion bttn anti-cors:assets/js/app.js
     })
     .then(data => { 
       showAnswer(data); // llamamos a la funcion que nos mostrará la imágen de la data en la página
@@ -129,10 +112,10 @@
       alert('Hubo un error en la API'); // Mensaje de error
     })
 
-    $('#answer').empty();
-    })
-  });
+    $('#content').empty();
+  })
+});
 
     function showAnswer(data) {
-      $('#answer').append(`<img src="${data.image}"><div><h3>${data.answer}</h3></div>`);
-  }
+      $('#content').append(`<img src="${data.image}"><div><h3>${data.answer}</h3></div>`);
+    }
