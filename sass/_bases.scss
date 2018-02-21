@@ -1,0 +1,48 @@
+/*
+*font-family: 'Pacifico', cursive;
+*font-family: 'Lato', sans-serif;
+ */
+html{
+	height: 100vh;
+}
+body{
+	font-family: 'Lato', sans-serif;
+	color: #fff;
+	margin:0;
+	padding:0;
+	@include background_main();	
+}
+
+.logo{
+	font-family: 'Pacifico', cursive;
+	@include details_logo();
+h1{
+	font-size: 5em;
+	}
+}
+
+.form-control{
+	margin-top: 0.1em;
+	margin-bottom: 0.5em;
+}
+
+.register, .login{
+
+	h4{
+		font-size: $font_h4;
+	}
+}
+
+.register, .login{
+	button{
+		@include button_style();
+	}
+	button:hover{
+		@include button_style_hover();
+	}
+	
+}
+
+.firebaseSection{
+	padding-bottom: 3em;
+}

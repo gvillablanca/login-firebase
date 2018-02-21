@@ -1,0 +1,24 @@
+@mixin background_main(){
+	background-image: $backgraund;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100% 100%;
+}
+
+@mixin details_logo(){
+	padding-top: 2em;
+	padding-bottom: 2em;
+	text-align:center;
+}
+
+@mixin button_style(){
+	background-color: $color_blue;
+	color: $color_green;
+	border: 0.2em solid $color_blue;
+}
+
+@mixin button_style_hover(){
+	background-color: $color_green;
+	color: #fff ;
+	border: 0.1em solid $color_blue;
+}
