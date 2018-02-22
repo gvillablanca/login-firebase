@@ -3,12 +3,13 @@
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 100% 100%;
+	background-attachment: fixed;
 }
 
 @mixin details_logo(){
 	padding-top: 2em;
 	padding-bottom: 2em;
-	text-align:center;
+	text-align: center;
 }
 
 @mixin button_style(){

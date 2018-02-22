@@ -5809,10 +5809,13 @@ body {
   color: #fff;
   margin: 0;
   padding: 0;
+  width: 100%;
+  height: auto;
   background-image: -webkit-linear-gradient(top, #371555 0%, #3bcd84 100%);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 100% 100%; }
+  background-size: 100% 100%;
+  background-attachment: fixed; }
 
 .logo {
   font-family: 'Pacifico', cursive;
@@ -5821,10 +5824,17 @@ body {
   text-align: center; }
   .logo h1 {
     font-size: 5em; }
+  .logo h5 {
+    font-family: 'Lato', sans-serif;
+    line-height: 1.5em;
+    font-size: 1.25em; }
 
 .form-control {
   margin-top: 0.1em;
   margin-bottom: 0.5em; }
+
+.ask-input {
+  color: black; }
 
 .register h4, .login h4 {
   font-size: 1.5em; }
@@ -5839,6 +5849,36 @@ body {
   border: 0.1em solid #371555; }
 
 .firebaseSection {
-  padding-bottom: 3em; }
+  padding-bottom: 2em; }
+
+#logout {
+  background-color: transparent;
+  border: none;
+  padding: 0 0 0.5em 1em;
+  margin: 0;
+  color: #fff; }
+
+.welcome {
+  vertical-align: middle; }
+
+.makeAQuestion {
+  text-align: center; }
+
+#generarAnswer {
+  background-color: #371555;
+  color: #3bcd85;
+  border: 0.2em solid #371555; }
+
+.imageResponse {
+  text-align: center; }
+
+.inputQuestion {
+  margin-bottom: 2em; }
+
+/* #answer h3{
+	text-align: center;
+	font-size: 3em;
+	text-transform: uppercase;
+} */
 
 /*# sourceMappingURL=main.css.map */

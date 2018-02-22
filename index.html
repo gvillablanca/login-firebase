@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Preguntame</title>
+    <title>Oráculo</title>
     <script src="https://www.gstatic.com/firebasejs/4.10.0/firebase.js"></script>
     <script>
       // Initialize Firebase
@@ -18,8 +18,7 @@
       };
       firebase.initializeApp(config);
     </script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Lato|Pacifico" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,900|Pacifico" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
   </head>
 
@@ -60,7 +59,6 @@
             </div>
           </section>
           <!-- End Section -->
-
           <!-- Login Section -->
           <section class="login">
             <div class="container">
@@ -92,34 +90,46 @@
       </div>
     </div>
     </section>
-
+    <!-- End Section -->
     <section id="answer">
-      <!--contenido creado -->
       <div class="container">
         <div class="row">
-          <div class="col-lg-12">
-            <!-- Botonera e indicacion -->
-            <h2>Haz tu pregunta</h2>
-            <form class="ask-here" action="" method="post" placeholder="Escribe tu pregunta aquí">
-              <input type="text" name="submit" class="ask-input">
-              <button type="button" name="button" id="generarAnswer" class="btn btn-default">Preguntar!</button>
-            </form>
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <!-- Welcome Section -->
+            <div class="row welcome">
+              <div class="col-lg-1 col-md-1 col-sm-3 col-xs-3 col-lg-offset-5 col-md-offset-5 col-sm-offset-4 col-xs-offset-4">
+                <h4 id="logout-text">¡Bienvenido!</h4>
+              </div>
+              <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"><button id="logout" class="btn btn-default" onclick="logout()"><i class="fas fa-power-off fa-2x"></i></button>
+              </div>
+            </div>
+            <!-- Make a Question Section -->
+            <div class="row makeAQuestion">
+              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 col-lg-offset-4 col-md-offset-4 col-sm-offset-4 col-xs-offset-4">
+                <h2>Haz tu pregunta</h2>
+              </div>
+            </div>
+            <div class="container">
+              <div class="row inputQuestion">
+                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 col-lg-offset-2 col-md-offset-2 col-sm-offset-2 col-xs-offset-2">
+                  <div class="input-group">
+                    <input type="text" class="form-control ask-here" placeholder="Escribe tu pregunta aquí" aria-describedby="basic-addon2">
+                    <span class="input-group-addon btn btn-default" id="generarAnswer">Preguntar</span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-      <!-- contenido de respuesta random -->
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12" id="content">
-            <!-- Aquí va el gif -->
-            <div id="answer"></div>
-          </div>
+          <!-- Contenedor principal -->
         </div>
       </div>
     </section>
 
+
+
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
     <script src="assets/js/app.js"></script>
   </body>
 
