@@ -2,6 +2,8 @@
     $('#answer').hide();
 
     $('#cors').on('click', () => {
+
+      const cors = $('#cors');
       $('.login').hide();
       $('.register').hide();
       $('#answer').show();
@@ -11,6 +13,12 @@
     $('#send-login').on('click', () => {
       const email = $('#email-login').val();
       const password = $('#password-login').val();
+      if (email === 0 || email === null || email === '') {
+        return alert('Hey, espera! \n Debes escribir tu mail de usuario');
+      }
+      if (password === 0 || password === null || password === '') {
+        return alert('También debes escribir tu contraseña');
+      }
 
       firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
         // Handle Errors here.
@@ -41,10 +49,6 @@
     }
 
     function isVisible() {
-      var answer = document.getElementById('answer');
-      answer.innerHTML = `
-          <p id="logout-text">Bienvenido!</p>
-          <button id="logout" class="btn btn-default" onclick="logout()">Cerrar sesión</button>`;
       //en esta seccion iria a la vista sus secciones con su contenido, y se ocultaria el login
       $('.login').hide();
       $('#answer').show();
@@ -90,6 +94,7 @@
       $('.login').show();
     });
 
+
     //Función para llamar a la API y visualizar su contenido
     $(document).ready(() => {
       /*
@@ -108,10 +113,15 @@
             alert('Hubo un error en la API'); // Mensaje de error
           })
 
-        $('#content').empty();
+        $('.imageResponse').empty();
       })
     });
 
     function showAnswer(data) {
-      $('#answer').append(`<img src="${data.image}"><div><h3>${data.answer}</h3></div>`);
+      $('#answer').append(`<div class="container"><div class="row imageResponse">
+          <div class="col-lg-6 col-md-6 col-sm-8 col-xs-8 col-lg-offset-3 col-md-offset-3  col-sm-offset-2 col-xs-offset-2">
+            <img src="${data.image}">
+          </div>
+        </div>
+        </div></div>`);
     }
