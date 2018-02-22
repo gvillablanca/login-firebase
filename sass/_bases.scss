@@ -10,7 +10,7 @@ body{
 	color: #fff;
 	margin:0;
 	padding:0;
-	@include background_main();	
+	@include background_main();
 }
 
 .logo{
@@ -19,6 +19,9 @@ body{
 h1{
 	font-size: 5em;
 	}
+	h5{
+		font-size: $font_p;
+	}
 }
 
 .form-control{
@@ -26,8 +29,11 @@ h1{
 	margin-bottom: 0.5em;
 }
 
-.register, .login{
+.ask-input{
+	color: black;
+}
 
+.register, .login{
 	h4{
 		font-size: $font_h4;
 	}
@@ -40,7 +46,7 @@ h1{
 	button:hover{
 		@include button_style_hover();
 	}
-	
+
 }
 
 .firebaseSection{
